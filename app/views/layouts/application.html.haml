@@ -19,7 +19,10 @@
           = link_to 'AwesomeEvents', root_path, class: 'navbar-brand'
         .collapse.navbar-collapse#bs-example-navbar-collapse-1
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to 'Twitterでログイン', '/auth/twitter'
+            -if logged_in?
+              %li= link_to 'ログアウト', logout_path
+            -else
+              %li= link_to 'Twitterでログイン', '/auth/twitter'
     .container
       - if flash[:notice]
         .alert.alert-success
