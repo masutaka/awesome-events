@@ -1,25 +1,30 @@
 .page-header
   %h1= @event.name
 
-.panel.panel-default
-  .panel-heading
-    主催者
-  .panel-body
-    = link_to("https://twitter.com/#{@event.owner.nickname}") do
-      = image_tag @event.owner.image_url
-      = "@#{@event.owner.nickname}"
-.panel.panel-default
-  .panel-heading
-    開催時間
-  .panel-body
-    = "#{@event.start_time.strftime('%Y/%m/%d %H:%M')} - #{@event.end_time.strftime('%Y/%m/%d %H:%M')}"
-.panel.panel-default
-  .panel-heading
-    開催場所
-  .panel-body
-    = @event.place
-.panel.panel-default
-  .panel-heading
-    イベント内容
-  .panel-body
-    = @event.content
+.row
+  .col-md-8
+    .panel.panel-default
+      .panel-heading
+        主催者
+      .panel-body
+        = link_to("https://twitter.com/#{@event.owner.nickname}") do
+          = image_tag @event.owner.image_url
+          = "@#{@event.owner.nickname}"
+    .panel.panel-default
+      .panel-heading
+        開催時間
+      .panel-body
+        = "#{@event.start_time.strftime('%Y/%m/%d %H:%M')} - #{@event.end_time.strftime('%Y/%m/%d %H:%M')}"
+    .panel.panel-default
+      .panel-heading
+        開催場所
+      .panel-body
+        = @event.place
+    .panel.panel-default
+      .panel-heading
+        イベント内容
+      .panel-body
+        = @event.content
+  .col-md-4
+    - if @event.created_by?(current_user)
+      = link_to 'イベントを編集する', edit_event_path(@event), class: 'btn btn-info btn-lg btn-block'
