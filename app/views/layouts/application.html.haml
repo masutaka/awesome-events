@@ -2,8 +2,15 @@
 %html
   %head
     %title AwesomeEvents
+    %meta{ charset: 'utf8' }
+    %meta{ name: 'viewport', context: 'width=divice-width, initial-scale=1.0' }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %header.navbar.navbar-default{ role: 'navigation' }
+      .container
+        .navbar-header
+          = link_to 'AwesomeEvents', root_path, class: 'navbar-brand'
+    .container
+      = yield
