@@ -21,4 +21,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li= link_to 'Twitterでログイン', '/auth/twitter'
     .container
+      - if flash[:notice]
+        .alert.alert-success
+          = flash[:notice]
       = yield
