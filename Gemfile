@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-twitter', '~> 1.0.1'
+
+group :development, :test do
+  gem 'pry-rails'
+end
