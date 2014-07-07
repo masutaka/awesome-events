@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'haml-rails'
 gem 'kaminari', '~> 0.15.1'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-twitter', '~> 1.0.1'
 
