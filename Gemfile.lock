@@ -86,6 +86,7 @@ GEM
     omniauth-twitter (1.0.1)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
+    pg (0.17.1)
     polyamorous (1.0.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -172,6 +173,7 @@ DEPENDENCIES
   mini_magick (~> 3.7.0)
   omniauth (~> 1.2.1)
   omniauth-twitter (~> 1.0.1)
+  pg
   pry-rails
   rails (= 4.1.4)
   ransack (~> 1.2.2)
