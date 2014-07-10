@@ -2,6 +2,9 @@
   %h1= @event.name
 .row
   .col-md-8
+    - if @event.event_image?
+      .thumbnail
+        = image_tag @event.event_image.url
     .panel.panel-default
       .panel-heading
         主催者
