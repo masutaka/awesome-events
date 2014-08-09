@@ -1,7 +1,6 @@
 {
     "name": "masutaka-awesome-events",
     "env": {
-        "RAILS_ENV": "production",
         "TWITTER_CONSUMER_KEY": "bFOC2V3O9YFi4Mb7edVGARrnd",
         "TWITTER_CONSUMER_SECRET": "9FAF4jIPxwNEFEeSZgrGkV8lPJGOOQGdOiq7e8pkxPpLZuRHT9"
     },
